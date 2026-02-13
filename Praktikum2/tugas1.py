@@ -144,6 +144,15 @@ def input_barang(data_dict):
 
 # input_barang(buka_data)
 
+#============================================================================
+#PRAKTIKUM  2 : Konsep ADT dan File Handling (STUDI KASUS)
+#TUGAS    6 : Memnuat Fungsi Menghapus Data Mengguankan Kode Barang
+#============================================================================
+
+def hapus_barang(data_dict):
+    
+    print
+
 
 def main():
     # load data saat program dijalankan
