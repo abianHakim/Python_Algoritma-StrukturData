@@ -3,28 +3,28 @@
 class Node:
     def __init__(self, data):
         self.data = data     
-        self.next = None      # Pointer ke node berikutnya
-        self.prev = None      # Pointer ke node sebelumnya
+        self.next = None      
+        self.prev = None      
 
 
 class DoublyLinkedList:
     def __init__(self):
-        self.head = None      # Node pertama
-        self.tail = None      # Node terakhir
+        self.head = None     
+        self.tail = None      
 
     def insert_at_end(self, data):
-        new_node = Node(data)     # Buat node baru
+        new_node = Node(data)     
 
-        if not self.head:         # Jika kosong
+        if not self.head:         
             self.head = new_node
             self.tail = new_node
         else:
-            self.tail.next = new_node   # Sambungkan node terakhir ke node baru
-            new_node.prev = self.tail   # Hubungkan kembali ke belakang
-            self.tail = new_node        # Update tail
+            self.tail.next = new_node   
+            new_node.prev = self.tail   
+            self.tail = new_node        
 
     def display_forward(self):
-        temp = self.head              # Mulai dari head
+        temp = self.head              
         while temp:
             print(temp.data, end=" -> ")
             temp = temp.next
@@ -32,14 +32,14 @@ class DoublyLinkedList:
 
     # LATIHAN 3
     def search(self, key):
-        temp = self.head              # Mulai dari head
+        temp = self.head             
 
-        while temp:                   # Selama masih ada node
-            if temp.data == key:      # Jika data ditemukan
+        while temp:                   
+            if temp.data == key:      
                 return True
-            temp = temp.next          # Pindah ke node berikutnya
+            temp = temp.next         
 
-        return False                  # Jika tidak ditemukan
+        return False                 
 
 
 dll = DoublyLinkedList()
