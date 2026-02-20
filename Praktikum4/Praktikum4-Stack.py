@@ -39,7 +39,7 @@ class Stack:
     def pop(self):
             # 1. Periksa apakah stack kosong
             if self.top is None:
-                    print("Stack kosong, tidak ada yang bisa di-pop.")
+                    print("Stack kosong, tidak ada yang bisa dipop.")
                     return None
             data_terhapus = self.top.data # simpan data yang akan dihapus
             self.top = self.top.next # geser top ke node berikutnya (node setelah top yang lama)
@@ -67,7 +67,7 @@ s.tampilkan()
 print('peek (lihat top):', s.peek())
 s.pop() 
 s.tampilkan()
-print('peek (lihat top):', s.peek())
+print('peek (lihat top):', s.peek())    
 # s.pop() 
 # s.tampilkan()
 # s.pop() 
