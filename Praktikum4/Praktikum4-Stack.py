@@ -32,6 +32,23 @@ class Stack:
         # 3. GESER TOP KE NODE BARU
             self.top = Nodebaru # top sekarang menunjuk ke node baru
 
+    def is_empty(self):
+            return self.top is None # stack kosong jika top tidak menunjuk ke node manapun (None)
+
+
+    def pop(self):
+            # 1. Periksa apakah stack kosong
+            if self.top is None:
+                    print("Stack kosong, tidak ada yang bisa di-pop.")
+                    return None
+            data_terhapus = self.top.data # simpan data yang akan dihapus
+            self.top = self.top.next # geser top ke node berikutnya (node setelah top yang lama)
+            return data_terhapus # kembalikan data yang dihapus
+
+    def peek(self):
+        if self.top is None:
+            return None
+        return self.top.data # kembalikan data pada top tanpa menghapusnya
 
     def tampilkan(self):
             current = self.top # mulai dari top
@@ -46,5 +63,12 @@ s = Stack()
 s.push('A ')
 s.push('B ')
 s.push('C ')
-
-s.tampilkan() # Output: Top -> A -> None
+s.tampilkan()
+print('peek (lihat top):', s.peek())
+s.pop() 
+s.tampilkan()
+print('peek (lihat top):', s.peek())
+# s.pop() 
+# s.tampilkan()
+# s.pop() 
+# s.tampilkan()
